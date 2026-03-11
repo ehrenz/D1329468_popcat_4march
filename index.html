@@ -51,8 +51,27 @@
         <div class = "container">
             <img class="title"src = "imgs/popcat.svg" alt = "POPCAT CLASSIC" width="400px">
             <div class = "cat-img" id = "p">0</div>
-        
         </div>
+
+        <script>
+            let count = 0;
+            let carImg = document.getElementById('p');
+
+            function addCount(){
+                count++;
+                carImg.innerHTML = count;
+                carImg.id = 'op';
+            }
+
+            let close = () => {
+                carImg.id = 'p';
+            }
+
+           document.addEventListener('pointerdown', addCount);
+           document.addEventListener('pointerup', close);
+
+
+        </script>
     </body>
 </html>
 
